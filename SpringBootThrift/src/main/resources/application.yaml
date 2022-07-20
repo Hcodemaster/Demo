@@ -1,0 +1,5 @@
+server:
+  thrift:
+    port: 8899
+    min-thread-pool: 100
+    max-thread-pool: 1000
