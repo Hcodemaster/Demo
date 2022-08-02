@@ -24,3 +24,9 @@ MyBatisPlus分页插件自定义查询结果分页的步骤如下：
     二、在MyBatisPlus默认放置的Mapper.xml文件中进行相应地实现
 Tips：方法中放置Page或者IPage对象后，引入的PaginationInnerInterceptor拦截器就可以拦截到该方法
 并根据此方法查询结果按照传入的Page对象要求进行分页
+
+
+5、SpringBoot + Redis
+导入Redis的starter即可
+通过已经由SpringBoot自动装配的StringRedisTemplate或RedisTemplate进行操纵访问
+结合Interceptor进行用户访问统计计数
