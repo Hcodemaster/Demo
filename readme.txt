@@ -30,3 +30,8 @@ Tips：方法中放置Page或者IPage对象后，引入的PaginationInnerInterce
 导入Redis的starter即可
 通过已经由SpringBoot自动装配的StringRedisTemplate或RedisTemplate进行操纵访问
 结合Interceptor进行用户访问统计计数
+
+
+6、Java + Kafka 
+首先在本地搭建Zookeeper与Kafka，然后导入Kafka-client的依赖
+
