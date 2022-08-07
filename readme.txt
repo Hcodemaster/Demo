@@ -35,3 +35,20 @@ Tips：方法中放置Page或者IPage对象后，引入的PaginationInnerInterce
 6、Java + Kafka 
 首先在本地搭建Zookeeper与Kafka，然后导入Kafka-client的依赖
 
+
+7、SpringBoot + Kafka
+首先创建Producer与Consumer两个项目，并分别在pom文件中写入Kafka的依赖
+依次在Producer与Consumer项目的配置文件中配置必要的配置信息，
+两个项目中都必须需要配置的属性项包括key和value的序列化和反序列化器
+在Consumer项目中额外需要配置gruoup-id属性项
+发送消息至特定主题可以直接采用KafkaTemplate来操纵
+消费消息则可以直接通过@ListenerXXXXX的注解来获取消息
+同时可以在@ListenerXXXXX的注解中添加自定义的消息过滤器
+
+Kafka支持集群部署，基本步骤如下：
+    一、部署Zookeeper集群（每个机器安装Zookeeper并修改配置文件）
+    二、每个机器安装Kafka，并修改其配置文件，最重要的一个属性为（broker-id）
+
+
+
+
