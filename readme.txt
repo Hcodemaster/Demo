@@ -51,4 +51,12 @@ Kafka支持集群部署，基本步骤如下：
 
 
 
+8、SpringBoot + RabbitMQ
+首先需要搭建RabbitMq环境，然后导入其Starter，并且同样是通过RabbitTemplate进行操纵发送消息
+通过@xxxListener注解进行监听，在该注解中需要配置queue属性，用于从相应的队列中消费消息
+并且，需要额外注入消息队列，各种类型的交换机的Bean，以及将队列按照规则进行绑定的binding等Bean
+在目前的Demo中仅试验了默认模式、广播模式以及最常用的发布订阅模式(Topic)
+
+
+
 
